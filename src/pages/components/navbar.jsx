@@ -113,7 +113,7 @@ class Navbar extends Component {
     constructor(props) {
         super(props)
     }
-    render(req) {
+    render() {
         const { classes } = this.props;
         return (
             <AppBar position="static" color="inherit" style={{opacity: .5, position: "fixed", top: 0, left: 0, width: "100%", maxHeight:"8vh", background:"#000000"}}>
@@ -137,7 +137,6 @@ class Navbar extends Component {
                     </Row>
                 </Toolbar>
             </AppBar>
-
         )
     }
 }
