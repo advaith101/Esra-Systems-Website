@@ -14,6 +14,9 @@ import home5wtext from '../images/home5wtext.jpg'
 
 
 export default class Home extends Component {
+    componentDidMount(){
+        document.body.style.background = "#fff";
+    }
     render() {
         return (
             <Fragment>
@@ -22,7 +25,7 @@ export default class Home extends Component {
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={home1} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <div style={{position:"absolute", bottom:"14%", left:"7%", maxWidth:"45vw"}}>
-                            <h1 style={{fontFamily:"helvetica", fontSize:"36pt", fontWeight:"", color:"#fff"}}>We are a software development firm based in Atlanta</h1>
+                            <h1 style={{fontFamily:"helvetica", fontSize:"32pt", fontWeight:"", color:"#fff"}}>We are a software development firm based in Atlanta</h1>
                             <h3 style={{color:"#fff", maxWidth:"30vw"}}>We specialize in developing software technology for your corporate needs. Ready to deploy anytime, anywhere.</h3>    
                         </div>
                     </div>
