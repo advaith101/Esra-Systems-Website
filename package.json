@@ -1,9 +1,7 @@
 {
   "name": "esrasystemsmain",
   "version": "0.1.0",
-  "engines": {
-    "node": "12.16.3"
-  },
+  "main":"App.js",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.10",
@@ -21,10 +19,11 @@
     "simple-flexbox": "^2.3.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node App.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
