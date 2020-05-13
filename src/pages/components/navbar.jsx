@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Redirect, Link, useHistory } from 'react-router-dom';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import {createMuiTheme, responsiveFontSizes, MuiThemeProvider} from '@material-ui/core/styles';
 // import { red } from 'material-ui/core/colors';
 import { AppBar, Toolbar, IconButton, MenuIcon, Typography, Button, Avatar} from '@material-ui/core';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
@@ -123,16 +123,24 @@ class Navbar extends Component {
                     </Link>
                     <Row className={classes.container}>
                         <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }} >
-                            <Button className={classes.button}>Home</Button>
+                            <Button className={classes.button}>
+                                <Typography>Home</Typography>
+                            </Button>
                         </Link>
                         <Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }} >
-                            <Button className={classes.button}>About Us</Button>
+                            <Button className={classes.button}>
+                                <Typography>About Us</Typography>
+                            </Button>
                         </Link>
                         <Link to="/products" style={{ color: 'inherit', textDecoration: 'none' }} >
-                            <Button className={classes.button}>Products</Button>
+                            <Button className={classes.button}>
+                                <Typography>Products</Typography>
+                            </Button>
                         </Link>
                         <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }} >
-                            <Button className={classes.button}>Contact</Button>
+                            <Button className={classes.button}>
+                                <Typography>Contact</Typography>
+                            </Button>
                         </Link>
                     </Row>
                 </Toolbar>
