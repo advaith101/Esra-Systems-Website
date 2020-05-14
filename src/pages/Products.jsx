@@ -55,7 +55,7 @@ export default class Products extends Component {
                             <img src={productswtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                             <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
                                 <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"8pt", fontWeight:"bold", color:"#333333"}}>Schedule a free trial</Typography>
+                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"5pt", fontWeight:"bold", color:"#333333"}}>Schedule a free trial</Typography>
                                 </div>
                             </Link>
                         </div>

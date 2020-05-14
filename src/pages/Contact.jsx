@@ -58,7 +58,7 @@ export default class contact extends Component {
                         </div>
                         <div style={{position:"relative", textAlign:"left"}}>
                             <img src={contactwtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                            <div style={{position:"absolute", bottom:"26.9%", left: "56.5%", maxWidth:"40vw"}}>
+                            <div style={{position:"absolute", bottom:"29%", left: "56.5%", maxWidth:"40vw"}}>
                                 <Box display="flex" flexDirection="column" m={0} p={0}>
                                     <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#333333", marginTop:0.5, marginBottom:0.5}}>Address: 4000.5 Commodore Drive, Atlanta, GA</Typography>
                                     <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#333333", marginTop:0.5, marginBottom:0.5}}>Business Inquiries: info@esrasystems.com</Typography>
