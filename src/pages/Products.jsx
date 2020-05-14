@@ -59,12 +59,24 @@ export default class Products extends Component {
                                 </div>
                             </Link>
                         </div>
-                        <div>
+                        <div style={{position:"relative", textAlign:"left"}}>
                             <img src={productswtxt4} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                            <div style={{position:"absolute", bottom:"26%", left:"7.7%",}}>
+                                <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4.5pt", fontWeight:"bold", color:"#333333"}}>For more information and a free trial, contact info@esrasystems.com or call +1 (919) 475-7292</Typography>
+                                <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
+                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"5pt", fontWeight:"bold", color:"#333333", marginTop:3}}>Contact Us</Typography>
+                                </Link>
+                            </div>
                         </div>
-                        <div>
-                            <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        </div>
+                        <div style={{position:"relative", textAlign:"right"}}>
+                        <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
+                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                            </Typography>
+                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            </Typography>
+                         </div>
+                    </div>
                 </Box>
             </Fragment>
         )
@@ -90,12 +102,24 @@ export default class Products extends Component {
                                 </div>
                             </Link>
                         </div>
-                        <div>
+                        <div style={{position:"relative", textAlign:"left"}}>
                             <img src={productswtxt4} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                            <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
+                                <Typography style={{fontFamily:"Helvetica Neue", fontSize:"20pt", fontWeight:"bold", color:"#333333"}}>For more information and a free trial, contact info@esrasystems.com or call +1 (919) 475-7292</Typography>
+                                <Link to="/contact" style={{ color: 'inherit'}}>
+                                        <Typography style={{fontFamily:"Helvetica Neue", fontSize:"16pt", fontWeight:"bold", color:"#333333", marginTop:30}}>Contact Us</Typography>
+                                </Link>
+                            </div>
                         </div>
-                        <div>
-                            <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        </div>
+                        <div style={{position:"relative", textAlign:"right"}}>
+                        <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
+                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"14pt", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                            </Typography>
+                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"14pt", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            </Typography>
+                         </div>
+                    </div>
                 </Box>
             </Fragment>
         )

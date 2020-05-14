@@ -77,8 +77,14 @@ export default class Home extends Component {
                             </div>
                         </Link>
                     </div>
-                    <div>
+                    <div style={{position:"relative", textAlign:"right"}}>
                         <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
+                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                            </Typography>
+                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            </Typography>
+                         </div>
                     </div>
                 </Box>
             </Fragment>
@@ -118,8 +124,14 @@ export default class Home extends Component {
                             </div>
                         </Link>
                     </div>
-                    <div>
+                    <div style={{position:"relative", textAlign:"right"}}>
                         <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
+                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"14pt", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                            </Typography>
+                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"14pt", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            </Typography>
+                         </div>
                     </div>
                 </Box>
             </Fragment>
