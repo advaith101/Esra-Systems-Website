@@ -1,81 +1,14 @@
 import React, {Component} from 'react';
 import { Redirect, Link, useHistory } from 'react-router-dom';
-import {createMuiTheme, responsiveFontSizes, MuiThemeProvider} from '@material-ui/core/styles';
+// import {createMuiTheme, responsiveFontSizes, MuiThemeProvider} from '@material-ui/core/styles';
 // import { red } from 'material-ui/core/colors';
-import { AppBar, Toolbar, IconButton, MenuIcon, Typography, Button, Avatar} from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography, Button, Avatar, createMuiTheme, responsiveFontSizes, MuiThemeProvider, List, ListItem, Grid, SwipeableDrawer} from '@material-ui/core';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import MenuIcon from '@material-ui/icons/Menu';
 import { Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite';
 import LogoDark from '../../logos/logodark.ico'
 import LogoWhite from '../../logos/logolight.ico'
-
-const styles = StyleSheet.create({
-    avatar: {
-        height: 35,
-        width: 35,
-        borderRadius: 50,
-        marginLeft: 14,
-        border: '1px solid #DFE0EB',
-    },
-    container: {
-        height: 70, width: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "flex-start",
-        backgroundColor: "#fff"
-    },
-    cursorPointer: {
-        cursor: 'pointer'
-    },
-    name: {
-        fontSize: "21px",
-        fontWeight: 300,
-        lineHeight: "70px",
-        color: "#323332",
-        textDecoration: "none",
-        fontFamily: "Roboto",
-        textAlign: 'right',
-        letterSpacing: 0.2,
-        '@media (max-width: 768px)': {
-            display: 'none'
-        }
-    },
-    separator: {
-        borderLeft: '1px solid #DFE0EB',
-        marginLeft: 32,
-        marginRight: 32,
-        height: 32,
-        width: 2,
-        '@media (max-width: 768px)': {
-            marginLeft: 12,
-            marginRight: 12
-        }
-    },
-    title: {
-        fontSize: "21px",
-        fontWeight: 300,
-        lineHeight: "70px",
-        color: "#788195",
-        textDecoration: "none",
-        fontFamily: "Roboto",
-        textAlign: 'right',
-        letterSpacing: 0.4,
-        marginLeft: 21,
-        '@media (max-width: 768px)': {
-            marginLeft: 73
-        },
-        '@media (max-width: 468px)': {
-            fontSize: 20
-        }
-    },
-    iconStyles: {
-        cursor: 'pointer',
-        marginLeft: 21,
-        '@media (max-width: 768px)': {
-            marginLeft: 12
-        }
-    }
-});
 
 const useStyles = theme => ({
     root: {
@@ -106,16 +39,107 @@ const useStyles = theme => ({
         justifyContent: "flex-end",
         marginLeft:10,
         marginRight:10
+    },
+    list : {
+        width : 200,
+    },
+    padding : {
+        paddingRight : 30,
+        cursor : "pointer",
+    },
+    sideBarIcon : {
+        padding : 0,
+        color : "white",
+        cursor : "pointer",
     }
 });
+
+// let theme = createMuiTheme();
+// theme = responsiveFontSizes(theme);
 
 class Navbar extends Component {
     constructor(props) {
         super(props)
+        this.state = {drawerActivate:false, drawer:false};
+        this.createDrawer = this.createDrawer.bind(this);
+        this.destroyDrawer = this.destroyDrawer.bind(this);
     }
-    render() {
+    componentWillMount(){
+        if(window.innerWidth <= 1000){
+          this.setState({drawerActivate:true});
+        }
+    
+        window.addEventListener('resize',()=>{
+          if(window.innerWidth <= 1000){
+            this.setState({drawerActivate:true});
+          }
+          else{
+            this.setState({drawerActivate:false})
+          }
+        });
+    }
+
+    //Small Screens
+    createDrawer() {
+    const { classes } = this.props;
+    return (
+      <div>
+        <AppBar position="static" color="inherit" style={{opacity: .5, position: "fixed", top: 0, left: 0, width: "100%", maxHeight:"8vh", background:"#000000"}}>
+            <Toolbar variant="dense"> 
+                <Link to="/">
+                    <Avatar variant='square' className={classes.large} src={LogoWhite} />
+                </Link>
+                <Row className={classes.container}>
+                    <MenuIcon
+                    className = {this.props.classes.sideBarIcon}
+                    onClick={()=>{this.setState({drawer:true})}} />
+                </Row>
+            </Toolbar>
+        </AppBar>
+
+        <SwipeableDrawer
+         anchor="right"
+         open={this.state.drawer}
+         onClose={()=>{this.setState({drawer:false})}}
+         onOpen={()=>{this.setState({drawer:true})}}>
+
+           <div
+             tabIndex={0}
+             role="button"
+             onClick={()=>{this.setState({drawer:false})}}
+             onKeyDown={()=>{this.setState({drawer:false})}}>
+
+            <List className = {this.props.classes.list}>
+                <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }} >
+                    <ListItem key = {1} button divider>
+                        <Typography>Home</Typography>
+                    </ListItem>
+                </Link>
+                <Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }} >
+                    <ListItem key = {2} button divider>
+                        <Typography>About Us</Typography>
+                    </ListItem>
+                </Link>
+                <Link to="/products" style={{ color: 'inherit', textDecoration: 'none' }} >
+                    <ListItem key = {3} button divider>
+                        <Typography>Products</Typography>
+                    </ListItem>
+                </Link>
+                <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }} >
+                    <ListItem key = {4} button divider>
+                        <Typography>Contact</Typography>
+                    </ListItem>
+                </Link>
+            </List>
+         </div>
+       </SwipeableDrawer>
+      </div>
+    )};
+    
+    //Large screens
+    destroyDrawer(){
         const { classes } = this.props;
-        return (
+        return(
             <AppBar position="static" color="inherit" style={{opacity: .5, position: "fixed", top: 0, left: 0, width: "100%", maxHeight:"8vh", background:"#000000"}}>
                 <Toolbar variant="dense"> 
                     <Link to="/">
@@ -124,7 +148,7 @@ class Navbar extends Component {
                     <Row className={classes.container}>
                         <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }} >
                             <Button className={classes.button}>
-                                <Typography>Home</Typography>
+                                <Typography>Home</Typography>                       
                             </Button>
                         </Link>
                         <Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }} >
@@ -145,6 +169,14 @@ class Navbar extends Component {
                     </Row>
                 </Toolbar>
             </AppBar>
+        )   
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.drawerActivate ? this.createDrawer() : this.destroyDrawer()}
+            </div>
         )
     }
 }

@@ -15,11 +15,33 @@ import productswtxt4 from '../images/3/productswtxt4.jpg'
 import home5wtext from '../images/1/homewtxt5.jpg'
 
 export default class Products extends Component {
-    componentDidMount(){
+    constructor(props) {
+        super(props)
+        this.state = { isLoading: true, drawerActivate:false, drawer:false }
+        this.smallScreen = this.smallScreen.bind(this);
+        this.largeScreen = this.largeScreen.bind(this);
+    }
+    componentWillMount() {
+        if(window.innerWidth <= 1000){
+          this.setState({drawerActivate:true});
+        }
+    
+        window.addEventListener('resize',()=>{
+          if(window.innerWidth <= 1000){
+            this.setState({drawerActivate:true});
+          }
+          else{
+            this.setState({drawerActivate:false})
+          }
+        });
+    }
+    componentDidMount() {
         document.body.style.background = "#F5F5F5";
     }
-    render() {
-        return (
+
+    //small screens
+    smallScreen() {
+        return(
             <Fragment>
                 <Navbar/>
                 <Box display="flex" flexDirection="column" m={0} p={0}>
@@ -32,9 +54,9 @@ export default class Products extends Component {
                         <div style={{position:"relative", textAlign:"left"}}>
                             <img src={productswtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                             <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
-                                <Button variant="primary" style={{position:"absolute", bottom:"25%", left:"6.7%", maxWidth:"45vw"}}>
-                                    <Typography>Schedule a free trial</Typography>
-                                </Button>
+                                <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
+                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"8pt", fontWeight:"bold", color:"#333333"}}>Schedule a free trial</Typography>
+                                </div>
                             </Link>
                         </div>
                         <div>
@@ -45,6 +67,45 @@ export default class Products extends Component {
                         </div>
                 </Box>
             </Fragment>
+        )
+    }
+
+    //large screens
+    largeScreen() {
+        return(
+            <Fragment>
+                <Navbar/>
+                <Box display="flex" flexDirection="column" m={0} p={0}>
+                        <div>
+                            <img src={productswtxt1} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        </div>
+                        <div>
+                            <img src={productswtxt2} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        </div>
+                        <div style={{position:"relative", textAlign:"left"}}>
+                            <img src={productswtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                            <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
+                                <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
+                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Schedule a free trial -></Typography>
+                                </div>
+                            </Link>
+                        </div>
+                        <div>
+                            <img src={productswtxt4} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        </div>
+                        <div>
+                            <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        </div>
+                </Box>
+            </Fragment>
+        )
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.drawerActivate ? this.smallScreen() : this.largeScreen()}
+            </div>
         )
     }
 };
