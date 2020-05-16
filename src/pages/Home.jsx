@@ -110,7 +110,7 @@ export default class Home extends Component {
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={home3wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <Link to="/products" style={{ color: 'inherit', textDecoration: 'none' }}>
-                            <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
+                            <div style={{position:"absolute", bottom:"24%", left:"7.7%"}}>
                                 <Typography style={{fontFamily:"Helvetica Neue", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Go to products page -></Typography>
                             </div>
                         </Link>
