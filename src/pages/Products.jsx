@@ -106,7 +106,10 @@ export default class Products extends Component {
                             <img src={productswtxt4} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                             <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
                                 <Typography style={{fontFamily:"Helvetica Neue", fontSize:"20pt", fontWeight:"bold", color:"#333333"}}>For more information and a free trial, contact info@esrasystems.com or call +1 (919) 475-7292</Typography>
-                                <Link to="/contact" style={{ color: 'inherit'}}>
+                                <Link to="/contact" style={{ color: 'inherit', textDecoration:'none'}}>
+                                        {/* <Button variant="outlined">
+                                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Contact Us</Typography>
+                                        </Button> */}
                                         <Typography style={{fontFamily:"Helvetica Neue", fontSize:"16pt", fontWeight:"bold", color:"#333333", marginTop:30}}>Contact Us</Typography>
                                 </Link>
                             </div>
