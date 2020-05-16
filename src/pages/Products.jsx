@@ -3,11 +3,6 @@ import { Redirect, Link, useHistory } from 'react-router-dom';
 import Box from '@material-ui/core/Box';
 import {Button, Typography} from '@material-ui/core';
 import Navbar from './components/navbar'
-import products1 from '../images/product1.jpg'
-import products2 from '../images/product2.jpg'
-import products3 from '../images/product3.jpg'
-import products4 from '../images/product4.jpg'
-import products5 from '../images/product5.jpg'
 import productswtxt1 from '../images/3/productswtxt1.jpg'
 import productswtxt2 from '../images/3/productswtxt2.jpg'
 import productswtxt3 from '../images/3/productswtxt3.jpg'

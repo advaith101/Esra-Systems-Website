@@ -2,11 +2,6 @@ import React, {Component, Fragment, Row} from 'react';
 import Box from '@material-ui/core/Box';
 import {Button, Typography, createMuiTheme, responsiveFontSizes, MuiThemeProvider} from '@material-ui/core';
 import Navbar from './components/navbar'
-import about1 from '../images/about1.jpg'
-import about2 from '../images/about2.jpg'
-import about3 from '../images/about3.jpg'
-import about4 from '../images/about4.jpg'
-import about5 from '../images/about5.jpg'
 import aboutwtxt1 from '../images/2/aboutwtxt1.jpg'
 import aboutwtxt2 from '../images/2/aboutwtxt2.jpg'
 import aboutwtxt3 from '../images/2/aboutwtxt3.jpg'

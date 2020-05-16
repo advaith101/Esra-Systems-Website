@@ -4,12 +4,6 @@ import Box from '@material-ui/core/Box';
 import {Button, Typography, createMuiTheme, responsiveFontSizes, MuiThemeProvider} from '@material-ui/core';
 import Navbar from './components/navbar';
 import Loader from 'react-loader-spinner';
-import home1 from '../images/home1.jpg'
-import home1flipped from '../images/home1flipped.jpg'
-import home2 from '../images/home2.jpg'
-import home3 from '../images/home3.jpg'
-import home4 from '../images/home4.jpg'
-import home5 from '../images/home5.jpg'
 import home1wtext from '../images/1/homewtxt1.jpg'
 import home2wtext from '../images/1/homewtxt2.jpg'
 import home3wtext from '../images/1/homewtxt3.jpg'
