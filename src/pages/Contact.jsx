@@ -56,19 +56,19 @@ export default class contact extends Component {
                             <img src={contactwtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                             <div style={{position:"absolute", bottom:"29%", left: "56.5%", maxWidth:"40vw"}}>
                                 <Box display="flex" flexDirection="column" m={0} p={0}>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#333333", marginTop:0.5, marginBottom:0.5}}>Address: 4000.5 Commodore Drive, Atlanta, GA</Typography>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#333333", marginTop:0.5, marginBottom:0.5}}>Business Inquiries: info@esrasystems.com</Typography>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#333333", marginTop:0.5, marginBottom:0.5}}>Apply: jobs@esrasystems.com</Typography>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#333333", marginTop:0.5, marginBottom:0.5}}>Phone: +1 (919) 475-7292</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#333333", marginTop:0.5, marginBottom:0.5}}>Address: 4000.5 Commodore Drive, Atlanta, GA</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#333333", marginTop:0.5, marginBottom:0.5}}>Business Inquiries: info@esrasystems.com</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#333333", marginTop:0.5, marginBottom:0.5}}>Apply: jobs@esrasystems.com</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#333333", marginTop:0.5, marginBottom:0.5}}>Phone: +1 (919) 475-7292</Typography>
                                 </Box>
                             </div>
                         </div>
                         <div style={{position:"relative", textAlign:"right"}}>
                         <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
-                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                            <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
                             </Typography>
-                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
                             </Typography>
                          </div>
                     </div>
@@ -90,10 +90,10 @@ export default class contact extends Component {
                             <img src={contactwtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                             <div style={{position:"absolute", bottom:"26.9%", left: "56.5%", maxWidth:"40vw"}}>
                                 <Box display="flex" flexDirection="column" m={0} p={0}>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"8pt", fontWeight:"bold", color:"#333333", marginTop:2, marginBottom:2}}>Address: 4002 Commodore Drive, Atlanta, GA</Typography>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"8pt", fontWeight:"bold", color:"#333333", marginTop:2, marginBottom:2}}>Business Inquiries: info@esrasystems.com</Typography>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"8pt", fontWeight:"bold", color:"#333333", marginTop:2, marginBottom:2}}>Apply: jobs@esrasystems.com</Typography>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"8pt", fontWeight:"bold", color:"#333333", marginTop:2, marginBottom:2}}>Phone: +1 (919) 475-7292</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"8pt", fontWeight:"bold", color:"#333333", marginTop:2, marginBottom:2}}>Address: 4002 Commodore Drive, Atlanta, GA</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"8pt", fontWeight:"bold", color:"#333333", marginTop:2, marginBottom:2}}>Business Inquiries: info@esrasystems.com</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"8pt", fontWeight:"bold", color:"#333333", marginTop:2, marginBottom:2}}>Apply: jobs@esrasystems.com</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"8pt", fontWeight:"bold", color:"#333333", marginTop:2, marginBottom:2}}>Phone: +1 (919) 475-7292</Typography>
                                 </Box>
                             </div>
                         </div>
@@ -118,19 +118,19 @@ export default class contact extends Component {
                             <img src={contactwtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                             <div style={{position:"absolute", bottom:"27%", left: "56.5%", maxWidth:"40vw"}}>
                                 <Box display="flex" flexDirection="column" m={0} p={0}>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"13pt", fontWeight:"bold", color:"#333333", marginTop:5, marginBottom:5}}>Address: 4002 Commodore Drive, Atlanta, GA</Typography>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"13pt", fontWeight:"bold", color:"#333333", marginTop:5, marginBottom:5}}>Business Inquiries: info@esrasystems.com</Typography>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"13pt", fontWeight:"bold", color:"#333333", marginTop:5, marginBottom:5}}>Apply: jobs@esrasystems.com</Typography>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"13pt", fontWeight:"bold", color:"#333333", marginTop:5, marginBottom:5}}>Phone: +1 (919) 475-7292</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"13pt", fontWeight:"bold", color:"#333333", marginTop:5, marginBottom:5}}>Address: 4002 Commodore Drive, Atlanta, GA</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"13pt", fontWeight:"bold", color:"#333333", marginTop:5, marginBottom:5}}>Business Inquiries: info@esrasystems.com</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"13pt", fontWeight:"bold", color:"#333333", marginTop:5, marginBottom:5}}>Apply: jobs@esrasystems.com</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"13pt", fontWeight:"bold", color:"#333333", marginTop:5, marginBottom:5}}>Phone: +1 (919) 475-7292</Typography>
                                 </Box>
                             </div>
                         </div>
                         <div style={{position:"relative", textAlign:"right"}}>
                         <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
-                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"14pt", fontWeight:"light", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                            <Typography style={{fontFamily:"Arial", fontSize:"14pt", fontWeight:"light", color:"#fff"}}> Business Inquiries: info@esrasystems.com
                             </Typography>
-                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"14pt", fontWeight:"light", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            <Typography style={{fontFamily:"Arial", fontSize:"14pt", fontWeight:"light", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
                             </Typography>
                          </div>
                     </div>
