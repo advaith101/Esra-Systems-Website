@@ -6,7 +6,6 @@ import Navbar from './components/navbar'
 import productswtxt1 from '../images/3/productswtxt1.jpg'
 import productswtxt2 from '../images/3/productswtxt2.jpg'
 import productswtxt3 from '../images/3/productswtxt3.jpg'
-import productswtxt4 from '../images/3/productswtxt4.jpg'
 import home5wtext from '../images/1/homewtxt5.jpg'
 
 export default class Products extends Component {
@@ -50,25 +49,24 @@ export default class Products extends Component {
                             <img src={productswtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                             <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
                                 <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"5pt", fontWeight:"bold", color:"#333333"}}>Schedule a free trial</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"5pt", fontWeight:"bold", color:"#333333"}}>Schedule a free trial</Typography>
                                 </div>
                             </Link>
                         </div>
                         <div style={{position:"relative", textAlign:"left"}}>
-                            <img src={productswtxt4} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                             <div style={{position:"absolute", bottom:"26%", left:"7.7%",}}>
-                                <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4.5pt", fontWeight:"bold", color:"#333333"}}>For more information and a free trial, contact info@esrasystems.com or call +1 (919) 475-7292</Typography>
+                                <Typography style={{fontFamily:"Arial", fontSize:"4.5pt", fontWeight:"bold", color:"#333333"}}>For more information and a free trial, contact info@esrasystems.com or call +1 (919) 475-7292</Typography>
                                 <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"5pt", fontWeight:"bold", color:"#333333", marginTop:3}}>Contact Us</Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"5pt", fontWeight:"bold", color:"#333333", marginTop:3}}>Contact Us</Typography>
                                 </Link>
                             </div>
                         </div>
                         <div style={{position:"relative", textAlign:"right"}}>
                         <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
-                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                            <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
                             </Typography>
-                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
                             </Typography>
                          </div>
                     </div>
@@ -93,28 +91,30 @@ export default class Products extends Component {
                             <img src={productswtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                             <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
                                 <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
-                                    <Typography style={{fontFamily:"Helvetica Neue", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Schedule a free trial -></Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Schedule a free trial -></Typography>
                                 </div>
                             </Link>
                         </div>
                         <div style={{position:"relative", textAlign:"left"}}>
-                            <img src={productswtxt4} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        <svg width="17vw" height="17vw">
+                            <rect width="100vw" height="100vw" style={{fill:"#f5f5f5"}}/>
+                        </svg>
                             <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
-                                <Typography style={{fontFamily:"Helvetica Neue", fontSize:"20pt", fontWeight:"bold", color:"#333333"}}>For more information and a free trial, contact info@esrasystems.com or call +1 (919) 475-7292</Typography>
+                                <Typography style={{fontFamily:"Arial", fontSize:"20pt", fontWeight:"bold", color:"#333333"}}>For more information and a free trial, contact info@esrasystems.com or call +1 (919) 475-7292</Typography>
                                 <Link to="/contact" style={{ color: 'inherit', textDecoration:'none'}}>
                                         {/* <Button variant="outlined">
-                                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Contact Us</Typography>
+                                            <Typography style={{fontFamily:"Arial", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Contact Us</Typography>
                                         </Button> */}
-                                        <Typography style={{fontFamily:"Helvetica Neue", fontSize:"16pt", fontWeight:"bold", color:"#333333", marginTop:30}}>Contact Us</Typography>
+                                        <Typography style={{fontFamily:"Arial", fontSize:"16pt", fontWeight:"bold", color:"#333333", marginTop:30}}>Contact Us</Typography>
                                 </Link>
                             </div>
                         </div>
                         <div style={{position:"relative", textAlign:"right"}}>
                         <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
-                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"14pt", fontWeight:"light", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                            <Typography style={{fontFamily:"Arial", fontSize:"14pt", fontWeight:"light", color:"#fff"}}> Business Inquiries: info@esrasystems.com
                             </Typography>
-                            <Typography style={{fontFamily:"Helvetica Neue", fontSize:"14pt", fontWeight:"light", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            <Typography style={{fontFamily:"Arial", fontSize:"14pt", fontWeight:"light", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
                             </Typography>
                          </div>
                     </div>
