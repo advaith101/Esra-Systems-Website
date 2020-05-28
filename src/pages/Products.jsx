@@ -54,6 +54,9 @@ export default class Products extends Component {
                             </Link>
                         </div>
                         <div style={{position:"relative", textAlign:"left"}}>
+                            <svg width="12vw" height="12vw">
+                            <rect width="70vw" height="70vw" style={{fill:"#f5f5f5"}}/>
+                        </svg>
                             <div style={{position:"absolute", bottom:"26%", left:"7.7%",}}>
                                 <Typography style={{fontFamily:"Arial", fontSize:"4.5pt", fontWeight:"bold", color:"#333333"}}>For more information and a free trial, contact info@esrasystems.com or call +1 (919) 475-7292</Typography>
                                 <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
@@ -64,6 +67,7 @@ export default class Products extends Component {
                         <div style={{position:"relative", textAlign:"right"}}>
                         <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
+
                             <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
                             </Typography>
                             <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
