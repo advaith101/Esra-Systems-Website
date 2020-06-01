@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Redirect, Link, useHistory } from 'react-router-dom';
 // import {createMuiTheme, responsiveFontSizes, MuiThemeProvider} from '@material-ui/core/styles';
 // import { red } from 'material-ui/core/colors';
-import { AppBar, Toolbar, IconButton, Typography, Button, Avatar, createMuiTheme, responsiveFontSizes, MuiThemeProvider, List, ListItem, Grid, SwipeableDrawer} from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography, Button, Avatar, createMuiTheme, responsiveFontSizes, MuiThemeProvider, List, ListItem, Grid, SwipeableDrawer, Divider} from '@material-ui/core';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Row } from 'simple-flexbox';
@@ -27,6 +27,12 @@ const useStyles = theme => ({
       width: theme.spacing(12),
       height: theme.spacing(12),
     },
+    medium: {
+        marginTop: "0%",
+        marginBottom: "0%",
+        width: theme.spacing(11),
+        height: theme.spacing(11),
+    },
     container: {
         height: 70, width: "100%", maxHeight:"8vh",
         display: "flex",
@@ -41,7 +47,7 @@ const useStyles = theme => ({
         marginRight:10
     },
     list : {
-        width : 200,
+        width : "100vw",
     },
     padding : {
         paddingRight : 30,
@@ -51,6 +57,14 @@ const useStyles = theme => ({
         padding : 0,
         color : "white",
         cursor : "pointer",
+    },
+    paper : {
+        background: "black",
+        opactity: "0.5"
+    },
+    divider : {
+        width: "100%",
+        backgroundColor: "#fff"
     }
 });
 
@@ -98,7 +112,8 @@ class Navbar extends Component {
         </AppBar>
 
         <SwipeableDrawer
-         anchor="right"
+         classes={{paper: classes.paper}}
+         anchor="top"
          open={this.state.drawer}
          onClose={()=>{this.setState({drawer:false})}}
          onOpen={()=>{this.setState({drawer:true})}}>
@@ -110,24 +125,32 @@ class Navbar extends Component {
              onKeyDown={()=>{this.setState({drawer:false})}}>
 
             <List className = {this.props.classes.list}>
+                <Link to="/" style={{ alignItems:'center', color: 'inherit', textDecoration: 'none' }} >
+                    <ListItem key = {1} button>
+                        <Avatar variant='square' className={classes.medium} src={LogoWhite} />
+                    </ListItem>
+                </Link>
                 <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }} >
-                    <ListItem key = {1} button divider>
-                        <Typography>Home</Typography>
+                    <ListItem key = {2} button>
+                        <Typography style={{color:"white"}}>Home</Typography>
                     </ListItem>
                 </Link>
+                <Divider className={classes.divider}/>
                 <Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }} >
-                    <ListItem key = {2} button divider>
-                        <Typography>About Us</Typography>
+                    <ListItem key = {3} button>
+                        <Typography style={{color:"white"}}>About Us</Typography>
                     </ListItem>
                 </Link>
+                <Divider className={classes.divider}/>
                 <Link to="/products" style={{ color: 'inherit', textDecoration: 'none' }} >
-                    <ListItem key = {3} button divider>
-                        <Typography>Products</Typography>
+                    <ListItem key = {4} button>
+                        <Typography style={{color:"white"}}>Products</Typography>
                     </ListItem>
                 </Link>
+                <Divider className={classes.divider}/>
                 <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }} >
-                    <ListItem key = {4} button divider>
-                        <Typography>Contact</Typography>
+                    <ListItem key = {5} button>
+                        <Typography style={{color:"white"}}>Contact</Typography>
                     </ListItem>
                 </Link>
             </List>
