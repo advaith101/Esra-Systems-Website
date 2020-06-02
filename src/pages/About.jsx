@@ -12,7 +12,7 @@ import aboutmobile2 from '../images/2/mobile/aboutmobile2.jpg'
 import aboutmobile3 from '../images/2/mobile/aboutmobile3.jpg'
 import aboutmobile4 from '../images/2/mobile/aboutmobile5.jpg'
 import aboutmobile5 from '../images/2/mobile/aboutmobile6.jpg'
-
+import footer from '../images/1/mobile/Footerdiff.jpg'
 
 export default class About extends Component {
     constructor(props) {
@@ -22,12 +22,12 @@ export default class About extends Component {
         this.largeScreen = this.largeScreen.bind(this);
     }
     componentWillMount() {
-        if(window.innerWidth <= 900){
+        if(window.outerWidth <= 900){
           this.setState({drawerActivate:true});
         }
     
         window.addEventListener('resize',()=>{
-          if(window.innerWidth <= 900){
+          if(window.outerWidth <= 900){
             this.setState({drawerActivate:true});
           }
           else{
@@ -50,7 +50,7 @@ export default class About extends Component {
                 <Navbar/>
                 <Box display="flex" flexDirection="column" m={0} p={0} style={{fontSize:0}}>
                     <div style={{position:"relative", textAlign:"left"}}>
-                        <img src={aboutmobile1} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        <img src={aboutmobile1} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         <Typography  style={{fontFamily:"Arial", 
                              color:"white",
                             lineHeight:"7vw",
@@ -70,13 +70,15 @@ export default class About extends Component {
                         </Typography>
                         </div>
                         <div style={{position:"relative", textAlign:"left"}}>
-                        <img src={aboutmobile2} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        <img src={aboutmobile2} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         
-                        <svg height="151vw" style={{position:"absolute", top:"28%", left:"5%"}}>
-                            <rect x="0" y="0" height="150vw" width=".3vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
-                            <rect x="0" y="0" height=".3vw" width="5.5vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
+                        <svg height="152vw" style={{position:"absolute", top:"28%", left:"5%"}}>
+                            {/* current issue with svg is not resposive for if text changes paragraph size
+                            "The Problem" changes from 8 lines to 9 lines if the screen becomes smaller */}
+                            <rect x="0" y="1vw" height="150vw" width=".3vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
+                            <rect x="0" y="1vw" height=".3vw" width="5.5vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
                             <rect x="0" y="70vw" height=".3vw" width="5.5vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
-                            <rect x="0" y="150vw" height=".3vw" width="5.5vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
+                            <rect x="0" y="151vw" height=".3vw" width="5.5vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
                         </svg>
                         <Typography  style={{fontFamily:"Arial", 
                              color:"black",
@@ -87,6 +89,7 @@ export default class About extends Component {
                            fontSize:"7vw"}}>
                         <b>Our Story</b>
                         <br/>
+
                             <Typography fontWeight="fontWeightLight" style={{fontSize:"5vw", 
                             marginRight:"11vw",marginTop:"5vw", lineHeight:"6vw", marginBottom: "11vw"}}>
                                 Our company came to life in
@@ -98,6 +101,7 @@ export default class About extends Component {
                                 didn’t necessarily have the
                                 tools to manage.</Typography>
                         </Typography>
+                        <div  height="151vw" style={{position:"absolute", top:"28%", left:"5%", right:"0%"}}>
                         <Typography  style={{fontFamily:"Arial", 
                              color:"black",
                             lineHeight:"5vw",
@@ -108,7 +112,7 @@ export default class About extends Component {
                         <b>The Problem</b>
                         <br/>
                             <Typography fontWeight="fontWeightLight" style={{fontSize:"4vw", 
-                            marginRight:"7vw",marginTop:"5vw", lineHeight:"6vw", marginBottom: "11.4vw"}}>
+                            marginRight:"0vw",marginTop:"5vw", lineHeight:"6vw", marginBottom: "11vw"}}>
                                 Overburdened by hundreds of
                                 distressed employee phone calls
                                 and emails during the pandemic, HR
@@ -122,7 +126,7 @@ export default class About extends Component {
                         <b>Our Process</b>
                         <br/>
                             <Typography fontWeight="fontWeightLight" style={{fontSize:"4vw", 
-                            marginRight:"7vw",marginTop:"5vw", lineHeight:"6vw", marginBottom: "11.4vw"}}>
+                            marginRight:"7vw",marginTop:"3vw", lineHeight:"6vw", marginBottom: "8vw"}}>
                                 Once we identified the problem, we
                                 mobilized rapidly, designing and
                                 building a web application that was
@@ -148,8 +152,9 @@ export default class About extends Component {
                                     through the use of a filter mechanism.</Typography>
                                 </Typography>
                                 </div>
+                            </div>
                         <div style={{position:"relative", textAlign:"left"}}>
-                        <img src={aboutmobile3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        <img src={aboutmobile3} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                             <Typography  style={{fontFamily:"Arial", 
                              color:"black",
                             lineHeight:"7vw",
@@ -176,6 +181,70 @@ export default class About extends Component {
                             to carry on for years to come.</Typography>
                         </Typography>
                         </div>
+                        <div style={{position:"relative", textAlign:"left"}}>
+                        <img src={aboutmobile5} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
+                        </div>
+                        <div style={{position:"relative", textAlign:"left"}}>
+                        <img src={aboutmobile4} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
+                        <Typography style={{fontFamily:"Arial", 
+                             color:"black",
+                            lineHeight:"8vw",
+                            position:"absolute",
+                            top:"5%", 
+                            left:"14%",
+                            right:"11%",
+                           fontSize:"7vw"}}>
+                            <b>Our Team</b>
+                            <br/>
+                            <br/>
+                            <div  height="70vw" style={{position:"relative", top:"28%"}}>
+                            <Typography style={{fontSize:"5vw", lineHeight:"4vw"}}>
+                                <b>Advaith Sekharan</b>
+                            <br/>
+                                <Typography style={{fontSize:"4vw",}}>Software</Typography>
+                                <Typography style={{fontSize:"4vw" ,marginTop:"2vw"}}>Advaith is our all-round technology
+                                expert. Being a full-stacked
+                                programmer, he is our code architect,
+                                bringing our technology solutions to life</Typography>
+                            <br/>
+                            <br/>
+                                <b>Josh Rafaeli</b>
+                            <br/>
+                            <Typography style={{fontSize:"4vw",}}>Operations</Typography>
+                                <Typography style={{fontSize:"4vw",marginTop:"2vw"}}>Josh Rafaeli leads our business
+                                    operations. Handling Marketing, Legal,
+                                    and Client outreach, in addition to our
+                                    company’s finances.</Typography>
+                            <br/>
+                            <br/>
+                                <b>Swaraj Agarwal</b>
+                            <br/>
+                            <Typography style={{fontSize:"4vw",}}>Design</Typography>
+                                <Typography style={{fontSize:"4vw",marginTop:"2vw"}}>Looking after all things design, Swaraj
+                                works on User Interfaces and Experiences
+                                ensuring that your transition to our
+                                software is seamless</Typography>
+                        </Typography>
+                        </div>
+                        </Typography>
+                    </div>
+                        <div style={{position:"relative", textAlign:"left"}}>
+                        <img src={footer} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
+                        <div style={{position:"absolute", bottom:"20%", left:"7.7%"}}>
+                            <Typography style={{fontFamily:"Arial", fontSize:"5vw", color:"#fff", lineHeight:"2vw"}}> 
+                            <b>Esra Systems</b>
+                            <br/>
+                            <br/>
+                            <Typography style={{fontSize:"3vw"}}>
+                                Business Inquiries: info@esrasystems.com
+                             <br/>Career Inquiries: jobs@esrasystems.com
+                            </Typography>
+                                <Typography style={{fontSize:"2vw"}}>
+                                All Rights Reserved © Esra Systems LLC 2020
+                                </Typography>
+                            </Typography>
+                         </div>
+                    </div>
                 </Box>
             </Fragment>
         )
@@ -188,19 +257,19 @@ export default class About extends Component {
                 <Navbar/>
                 <Box display="flex" flexDirection="column" m={0} p={0}>
                         <div>
-                            <img src={aboutwtxt1} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                            <img src={aboutwtxt1} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         </div>
                         <div>
-                            <img src={aboutwtxt2} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                            <img src={aboutwtxt2} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         </div>
                         <div>
-                            <img src={aboutwtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                            <img src={aboutwtxt3} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         </div>
                         <div>
-                            <img src={aboutwtxt4} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                            <img src={aboutwtxt4} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         </div>
                         <div style={{position:"relative", textAlign:"right"}}>
-                        <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                        <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
                             <Typography style={{fontFamily:"Arial", fontSize:"1.4vw", color:"#fff"}}> Business Inquiries: info@esrasystems.com
                             </Typography>

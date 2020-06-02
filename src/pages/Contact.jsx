@@ -17,13 +17,13 @@ export default class contact extends Component {
         this.largeScreen = this.largeScreen.bind(this);
     }
     componentWillMount() {
-        if(window.innerWidth <= 900){
+        if(window.outerWidth <= 900){
             console.log('heyyyy')
             this.setState({drawerActivate:true});
         }
     
         window.addEventListener('resize',()=>{
-            if(window.innerWidth <= 900){
+            if(window.outerWidth <= 900){
                 console.log('heyyyy')
                 this.setState({drawerActivate:true});
             }
@@ -43,7 +43,7 @@ export default class contact extends Component {
                 <Navbar/>
                 <Box display="flex" flexDirection="column" m={0} p={0} style={{fontSize: 0}}>
                         <div style={{position:"relative", textAlign:"left"}}>
-                            <img src={contactmobile1} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                            <img src={contactmobile1} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                             <Typography style={{fontFamily:"Arial", 
                              color:"white",
                             lineHeight:"9vw",
@@ -64,7 +64,7 @@ export default class contact extends Component {
                         </Typography>
                         </div>
                         <div style={{position:"relative", textAlign:"left"}}>
-                            <img src={contactmobile3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
+                            <img src={contactmobile3} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                             <div style={{position:"absolute", bottom:"8vw", left: "25%", maxWidth:"100vw"}}>
                                 <Box display="flex" flexDirection="column" m={0} p={0}>
                                     <Typography style={{fontFamily:"Arial", fontSize:"6vw", fontWeight:"bold", color:"#333333", marginTop:"10vw", marginBottom:"5vw"}}>Address: 
@@ -78,12 +78,20 @@ export default class contact extends Component {
                                 </Box>
                             </div>
                         </div>
-                        <div style={{position:"relative", textAlign:"right"}}>
-                        <img src={footer} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
-                            <Typography style={{fontFamily:"Arial", fontSize:"2.8vw", color:"#fff", marginBottom:"2vw"}}> Business Inquiries: info@esrasystems.com
+                        <div style={{position:"relative", textAlign:"left"}}>
+                        <img src={footer} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
+                        <div style={{position:"absolute", bottom:"20%", left:"7.7%"}}>
+                            <Typography style={{fontFamily:"Arial", fontSize:"5vw", color:"#fff", lineHeight:"2vw"}}> 
+                            <b>Esra Systems</b>
+                            <br/>
+                            <br/>
+                            <Typography style={{fontSize:"3vw"}}>
+                                Business Inquiries: info@esrasystems.com
+                             <br/>Career Inquiries: jobs@esrasystems.com
                             </Typography>
-                            <Typography style={{fontFamily:"Arial", fontSize:"2.8vw", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                                <Typography style={{fontSize:"2vw"}}>
+                                All Rights Reserved © Esra Systems LLC 2020
+                                </Typography>
                             </Typography>
                          </div>
                     </div>
