@@ -2,11 +2,12 @@ import React, {Component, Fragment, Row} from 'react';
 import Box from '@material-ui/core/Box';
 import {Button, Typography, createMuiTheme, responsiveFontSizes, MuiThemeProvider} from '@material-ui/core';
 import Navbar from './components/navbar'
-import aboutwtxt1 from '../images/2/aboutwtxt1.jpg'
-import aboutwtxt2 from '../images/2/aboutwtxt2.jpg'
-import aboutwtxt3 from '../images/2/aboutwtxt3.jpg'
-import aboutwtxt4 from '../images/2/aboutwtxt4.jpg'
-import home5wtext from '../images/1/homewtxt5.jpg'
+import aboutwtxt1 from '../images/2/desktop/aboutwtxt1.jpg'
+import aboutwtxt2 from '../images/2/desktop/aboutwtxt2.jpg'
+import aboutwtxt3 from '../images/2/desktop/aboutwtxt3.jpg'
+import aboutwtxt4 from '../images/2/desktop/aboutwtxt4.jpg'
+import home5wtext from '../images/1/desktop/homewtxt5.jpg'
+import aboutmobile from '../images/2/mobile/aboutmobile1.jpg'
 
 
 export default class About extends Component {
@@ -44,27 +45,35 @@ export default class About extends Component {
             <Fragment>
                 <Navbar/>
                 <Box display="flex" flexDirection="column" m={0} p={0}>
-                        <div>
-                            <img src={aboutwtxt1} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        </div>
-                        <div>
-                            <img src={aboutwtxt2} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        </div>
-                        <div>
-                            <img src={aboutwtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        </div>
-                        <div>
-                            <img src={aboutwtxt4} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        </div>
-                        <div style={{position:"relative", textAlign:"right"}}>
-                        <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
-                            <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                        <div class="container">
+                            <img src={aboutmobile} display="flex" alt="Background1" style={{maxWidth:"100vw"}}>
+                             </img>
+                             <div style={{
+                                position:"absolute",
+                                top:"30px",
+                                left:"30px",
+                             }}> 
+                            <div>
+                             <Typography style={{fontFamily:"Arial", 
+                             fontSize:"30px", 
+                             color:"white",
+                            lineHeight:"30px"}}>
+                            <b>Esra Systems</b>
+                            <br/>
+                            Tailored HR Solutions
+                             <Typography style={{
+                             fontSize:"20px", 
+                             }}>
+                             eewwwwwwwwwwwwwww
                             </Typography>
-                            <Typography style={{fontFamily:"Arial", fontSize:"4pt", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
-                            </Typography>
-                         </div>
-                    </div>
+                                </Typography>
+                                    </div>
+
+                            <div>
+
+                                </div>
+                             </div>
+                        </div>
                 </Box>
             </Fragment>
         )
@@ -91,9 +100,9 @@ export default class About extends Component {
                         <div style={{position:"relative", textAlign:"right"}}>
                         <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
-                            <Typography style={{fontFamily:"Arial", fontSize:"14pt", fontWeight:"light", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                            <Typography style={{fontFamily:"Arial", fontSize:"1.4vw", color:"#fff"}}> Business Inquiries: info@esrasystems.com
                             </Typography>
-                            <Typography style={{fontFamily:"Arial", fontSize:"14pt", fontWeight:"light", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            <Typography style={{fontFamily:"Arial", fontSize:"1.4vw", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
                             </Typography>
                          </div>
                     </div>
