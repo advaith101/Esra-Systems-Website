@@ -98,8 +98,8 @@ export default class Products extends Component {
                             <img src={productswtxt3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                             <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
                                 <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
-                                    <Typography style={{fontFamily:"Arial", fontSize:"2vw", fontWeight:"bold", color:"#333333"}}>Schedule a free trial
-                                    <ArrowForwardIcon style={{fontSize:"2.5vw", position:"absolute", bottom:".1vw"}}/></Typography>
+                                    <Typography style={{fontFamily:"Arial", fontSize:"1.7vw", fontWeight:"bold", color:"#333333"}}>Schedule a free trial
+                                    <ArrowForwardIcon style={{fontSize:"2.1vw", position:"absolute", bottom:".2vw"}}/></Typography>
                                 </div>
                             </Link>
                         </div>

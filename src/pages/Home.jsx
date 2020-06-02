@@ -19,7 +19,6 @@ import footer from '../images/1/mobile/Footer.jpg'
 
 
 
-
 export default class Home extends Component {
     constructor(props) {
         super(props)
@@ -54,7 +53,7 @@ export default class Home extends Component {
                 <Box display="flex" flexDirection="column" m={0} p={0} style={{fontSize: 0}}>
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={homemobile1} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        <Typography style={{fontFamily:"Roboto", 
+                        <Typography  style={{fontFamily:"Roboto", 
                              color:"white",
                             lineHeight:"7vw",
                             position:"absolute",
@@ -74,16 +73,17 @@ export default class Home extends Component {
                     </div>
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={homemobile2} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        <Typography style={{fontFamily:"Arial", 
+                        <Typography style={{fontFamily:"Roboto", 
                              color:"black",
                             lineHeight:"8vw",
                             position:"absolute",
                             top:"5%", 
                             left:"17.7%",
-                           fontSize:"6vw"}}>
+                           fontSize:"7vw"}}>
                             <b>Why Esra?</b>
                             <br/>
                             <br/>
+                            <Typography style={{fontSize:"6vw"}}>
                                 Fast Deployment
                             <br/>
                                 <Typography style={{fontSize:"4vw", marginRight:"20vw",marginTop:"2vw"}}>1-3 weeks: We guarantee an
@@ -105,12 +105,13 @@ export default class Home extends Component {
                                     we have Josh, Advaith and
                                     Swaraj. Contact us day or night.</Typography>
                         </Typography>
+                        </Typography>
                     </div>
 
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={homemobile3} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         
-                        <Typography style={{fontFamily:"Arial", 
+                        <Typography style={{fontFamily:"Roboto", 
                              color:"black",
                             lineHeight:"7vw",
                             position:"absolute",
@@ -135,7 +136,7 @@ export default class Home extends Component {
                         </Typography>
                         <Link to="/products" style={{ color: 'inherit', textDecoration: 'none' }}>
                             <div style={{position:"absolute", bottom:"5%", left:"10.7%"}}>
-                                <Typography style={{fontFamily:"Arial", fontSize:"3vw", fontWeight:"bold", color:"#333333"}}>Go to products page 
+                                <Typography style={{fontFamily:"Roboto", fontSize:"3vw", fontWeight:"bold", color:"#333333"}}>Go to products page 
                                 <ArrowForwardIcon style={{fontSize:"5vw", position:"absolute", bottom:"-.3vw"}}/>
                                 </Typography>
                             </div>
@@ -147,7 +148,7 @@ export default class Home extends Component {
                     </div>
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={homemobile5} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
-                        <Typography style={{fontFamily:"Arial", 
+                        <Typography style={{fontFamily:"Roboto", 
                              color:"black",
                             lineHeight:"8vw",
                             position:"absolute",
@@ -170,9 +171,9 @@ export default class Home extends Component {
                     <div style={{position:"relative", textAlign:"right"}}>
                         <img src={footer} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
-                            <Typography style={{fontFamily:"Arial", fontSize:"2.8vw", color:"#fff", marginBottom:"0vw"}}> Business Inquiries: info@esrasystems.com
+                            <Typography style={{fontFamily:"Roboto", fontSize:"2.8vw", color:"#fff", marginBottom:"0vw"}}> Business Inquiries: info@esrasystems.com
                             </Typography>
-                            <Typography style={{fontFamily:"Arial", fontSize:"2.8vw", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            <Typography style={{fontFamily:"Roboto", fontSize:"2.8vw", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
                             </Typography>
                          </div>
                     </div>
@@ -201,7 +202,8 @@ export default class Home extends Component {
                         <img src={home3wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <Link to="/products" style={{ color: 'inherit', textDecoration: 'none' }}>
                             <div style={{position:"absolute", bottom:"24%", left:"7.7%"}}>
-                                <Typography style={{fontFamily:"Arial", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Go to products page <ArrowForwardIcon style={{fontSize:"5vw", position:"absolute", bottom:"-.3vw"}}/></Typography>
+                                <Typography style={{fontFamily:"Roboto", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Go to products page <ArrowForwardIcon 
+                                style={{fontSize:"2vw", position:"absolute", bottom:"-.3vw"}}/></Typography>
                             </div>
                         </Link>
                     </div >
@@ -209,7 +211,7 @@ export default class Home extends Component {
                         <img src={home4wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
                             <div style={{position:"absolute", bottom:"30%", left:"7.7%"}}>
-                                <Typography style={{fontFamily:"Arial", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Contact Us
+                                <Typography style={{fontFamily:"Roboto", fontSize:"16pt", fontWeight:"bold", color:"#333333"}}>Contact Us
                                 </Typography>
                             </div>
                         </Link>
@@ -217,9 +219,9 @@ export default class Home extends Component {
                     <div style={{position:"relative", textAlign:"right"}}>
                         <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100vw"}}></img>
                         <div style={{position:"absolute", bottom:"30%", right:"7.7%"}}>
-                            <Typography style={{fontFamily:"Arial", fontSize:"1.4vw", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
+                            <Typography style={{fontFamily:"Roboto", fontSize:"1.4vw", fontWeight:"bold", color:"#fff"}}> Business Inquiries: info@esrasystems.com
                             </Typography>
-                            <Typography style={{fontFamily:"Arial", fontSize:"1.4vw", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
+                            <Typography style={{fontFamily:"Roboto", fontSize:"1.4vw", fontWeight:"bold", color:"#fff"}}> Career Inquiries: jobs@esrasystems.com
                             </Typography>
                          </div>
                     </div>
