@@ -71,20 +71,22 @@ export default class About extends Component {
                         </div>
                         <div style={{position:"relative", textAlign:"left"}}>
                         <img src={aboutmobile2} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
-                        
+                        {/*
                         <svg height="152vw" style={{position:"absolute", top:"28%", left:"5%"}}>
-                            {/* current issue with svg is not resposive for if text changes paragraph size
-                            "The Problem" changes from 8 lines to 9 lines if the screen becomes smaller */}
+                             current issue with svg is not resposive for if text changes paragraph size
+                            "The Problem" changes from 8 lines to 9 lines if the screen becomes smaller 
                             <rect x="0" y="1vw" height="150vw" width=".3vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
                             <rect x="0" y="1vw" height=".3vw" width="5.5vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
                             <rect x="0" y="70vw" height=".3vw" width="5.5vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
                             <rect x="0" y="151vw" height=".3vw" width="5.5vw" style={{position:"absolute" ,color:"#707070"}}> </rect>
+
                         </svg>
+                        */}
                         <Typography  style={{fontFamily:"Arial", 
                              color:"black",
                             lineHeight:"7vw",
                             position:"absolute",
-                            top:"3%", 
+                            top:"6%", 
                             left:"14%",
                            fontSize:"7vw"}}>
                         <b>Our Story</b>
@@ -101,7 +103,7 @@ export default class About extends Component {
                                 didn’t necessarily have the
                                 tools to manage.</Typography>
                         </Typography>
-                        <div  height="151vw" style={{position:"absolute", top:"28%", left:"5%", right:"0%"}}>
+                        <div  height="151vw" style={{position:"absolute", top:"28%", left:"0%", right:"0%"}}>
                         <Typography  style={{fontFamily:"Arial", 
                              color:"black",
                             lineHeight:"5vw",
@@ -112,7 +114,7 @@ export default class About extends Component {
                         <b>The Problem</b>
                         <br/>
                             <Typography fontWeight="fontWeightLight" style={{fontSize:"4vw", 
-                            marginRight:"0vw",marginTop:"5vw", lineHeight:"6vw", marginBottom: "11vw"}}>
+                            marginRight:"7vw",marginTop:"5vw", lineHeight:"6vw", marginBottom: "11vw"}}>
                                 Overburdened by hundreds of
                                 distressed employee phone calls
                                 and emails during the pandemic, HR
@@ -122,7 +124,7 @@ export default class About extends Component {
                                 leave requests. FMLA requirements
                                 didn’t make this easier, especially for
                                 large corporations spread over
-                                different states</Typography>
+                                different states.</Typography>
                         <b>Our Process</b>
                         <br/>
                             <Typography fontWeight="fontWeightLight" style={{fontSize:"4vw", 
@@ -159,7 +161,7 @@ export default class About extends Component {
                              color:"black",
                             lineHeight:"7vw",
                             position:"absolute",
-                            top:"13%", 
+                            top:"18%", 
                             left:"14%",
                            fontSize:"6vw"}}>
                         <b>Our Vision</b>
@@ -190,7 +192,7 @@ export default class About extends Component {
                              color:"black",
                             lineHeight:"8vw",
                             position:"absolute",
-                            top:"5%", 
+                            top:"8%", 
                             left:"14%",
                             right:"11%",
                            fontSize:"7vw"}}>
@@ -235,10 +237,12 @@ export default class About extends Component {
                             <b>Esra Systems</b>
                             <br/>
                             <br/>
+                            <br/>
                             <Typography style={{fontSize:"3vw"}}>
                                 Business Inquiries: info@esrasystems.com
                              <br/>Career Inquiries: jobs@esrasystems.com
                             </Typography>
+                            <br/>
                                 <Typography style={{fontSize:"2vw"}}>
                                 All Rights Reserved © Esra Systems LLC 2020
                                 </Typography>

@@ -10,6 +10,7 @@ import productsmobile1 from '../images/3/mobile/productmobile1.jpg'
 import productsmobile2 from '../images/3/mobile/productmobile2.jpg'
 import productsmobile3 from '../images/3/mobile/productmobile3.jpg'
 import productsmobile4 from '../images/3/mobile/productmobile4.jpg'
+import productsmobile5 from '../images/3/mobile/productmobile5.jpg'
 import home5wtext from '../images/1/desktop/homewtxt5.jpg'
 import footer from '../images/1/mobile/Footerdiff.jpg'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -72,8 +73,8 @@ export default class Products extends Component {
                              color:"black",
                             lineHeight:"8vw",
                             position:"absolute",
-                            top:"8%", 
-                            left:"20%",
+                            top:"12%", 
+                            left:"17%",
                             right:"15%",
                            fontSize:"7vw"}}>
                             <b>Basic Features</b>
@@ -133,6 +134,7 @@ export default class Products extends Component {
                         <div style={{position:"relative", textAlign:"left"}}>
                         <img src={productsmobile4} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         </div>
+
                         <div style={{position:"relative", textAlign:"left"}}>
                         <img src={footer} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         <div style={{position:"absolute", bottom:"20%", left:"7.7%"}}>
@@ -140,10 +142,12 @@ export default class Products extends Component {
                             <b>Esra Systems</b>
                             <br/>
                             <br/>
+                            <br/>
                             <Typography style={{fontSize:"3vw"}}>
                                 Business Inquiries: info@esrasystems.com
                              <br/>Career Inquiries: jobs@esrasystems.com
                             </Typography>
+                            <br/>
                                 <Typography style={{fontSize:"2vw"}}>
                                 All Rights Reserved © Esra Systems LLC 2020
                                 </Typography>

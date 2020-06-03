@@ -46,7 +46,7 @@ export default class contact extends Component {
                             <img src={contactmobile1} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                             <Typography style={{fontFamily:"Arial", 
                              color:"white",
-                            lineHeight:"9vw",
+                            lineHeight:"9.5vw",
                             position:"absolute",
                             bottom:"0%", 
                             left:"7.7%",
@@ -55,7 +55,7 @@ export default class contact extends Component {
                         <b>Let's do great things together</b>
                         <br/>
                             Contact Us
-                            <Typography style={{fontSize:"5vw", marginRight:"4vw", marginTop:"3vw", lineHeight:"6vw", marginBottom: "5vw"}}>
+                            <Typography style={{fontSize:"4.5vw", marginRight:"4vw", marginTop:"3vw", lineHeight:"6vw", marginBottom: "5vw"}}>
                                 We look forward to hearing about how
                                 Esra can help your HR team with our
                                 personalized solutions. Reach out to us
@@ -65,7 +65,7 @@ export default class contact extends Component {
                         </div>
                         <div style={{position:"relative", textAlign:"left"}}>
                             <img src={contactmobile3} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
-                            <div style={{position:"absolute", bottom:"8vw", left: "25%", maxWidth:"100vw"}}>
+                            <div style={{position:"absolute", bottom:"8vw", left: "20%", maxWidth:"100vw"}}>
                                 <Box display="flex" flexDirection="column" m={0} p={0}>
                                     <Typography style={{fontFamily:"Arial", fontSize:"6vw", fontWeight:"bold", color:"#333333", marginTop:"10vw", marginBottom:"5vw"}}>Address: 
                                     <br/><Typography style={{fontSize:"5vw", fontWeight:"light"}}>4000.5 Commodore Drive, <br/>Atlanta, GA</Typography></Typography>
@@ -85,10 +85,12 @@ export default class contact extends Component {
                             <b>Esra Systems</b>
                             <br/>
                             <br/>
+                            <br/>
                             <Typography style={{fontSize:"3vw"}}>
                                 Business Inquiries: info@esrasystems.com
                              <br/>Career Inquiries: jobs@esrasystems.com
                             </Typography>
+                            <br/>
                                 <Typography style={{fontSize:"2vw"}}>
                                 All Rights Reserved © Esra Systems LLC 2020
                                 </Typography>

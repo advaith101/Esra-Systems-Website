@@ -16,8 +16,8 @@ import homemobile3 from '../images/1/mobile/homemobile3.jpg'
 import homemobile4 from '../images/1/mobile/homemobile4.jpg'
 import homemobile5 from '../images/1/mobile/homemobile5.jpg'
 import footer from '../images/1/mobile/Footerdiff.jpg'
-
-
+import { CSSTransition } from 'react-transition-group';
+import '../index.css';
 
 export default class Home extends Component {
     constructor(props) {
@@ -25,6 +25,7 @@ export default class Home extends Component {
         this.state = { isLoading: true, drawerActivate:false, drawer:false }
         this.smallScreen = this.smallScreen.bind(this);
         this.largeScreen = this.largeScreen.bind(this);
+        this.isVisiblefirst = true;
     }
     componentWillMount() {
         if(window.outerWidth <= 850){
@@ -51,15 +52,16 @@ export default class Home extends Component {
             <Fragment>
                 <Navbar/>
                 <Box display="flex" flexDirection="column" m={0} p={0} style={{fontSize: 0}}>
+                    
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={homemobile1} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         <Typography  style={{fontFamily:"Arial", 
                              color:"white",
-                            lineHeight:"7vw",
+                            lineHeight:"9.4vw",
                             position:"absolute",
                             bottom:"3%", 
                             left:"7.7%",
-                           fontSize:"7vw"}}>
+                           fontSize:"8vw"}}>
                         <b>Esra Systems</b>
                         <br/>
                             Tailored HR Solutions
@@ -71,15 +73,17 @@ export default class Home extends Component {
                             with the FMLA and ADA processes.</Typography>
                         </Typography>
                     </div>
+                    
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={homemobile2} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                         <Typography style={{fontFamily:"Arial", 
                              color:"black",
                             lineHeight:"8vw",
                             position:"absolute",
-                            top:"5%", 
+                            top:"10%", 
                             left:"17.7%",
-                           fontSize:"7vw"}}>
+                           fontSize:"7vw",
+                            right:"16%"}}>
                             <b>Why Esra?</b>
                             <br/>
                             <br/>
@@ -117,13 +121,13 @@ export default class Home extends Component {
                              color:"black",
                             lineHeight:"7vw",
                             position:"absolute",
-                            top:"12%", 
+                            top:"14%", 
                             left:"10.7%",
                            fontSize:"4vw"}}>
-                            meet our product
+                            Meet our product
                             <div  height="60vw" style={{position:"relative", top:"10%", left:"0", right:"10%"}}>
                             <Typography style={{fontSize:"6vw"}}><b>The Esra Leave Manager</b></Typography>
-                            <Typography style={{fontSize:"4vw", marginRight:"6vw", marginTop:"3vw", lineHeight:"6vw", marginBottom: "3vw"}}>
+                            <Typography style={{fontSize:"4vw", marginRight:"9vw", marginTop:"3vw", lineHeight:"6vw", marginBottom: "3vw"}}>
                                 The Esra Leave Manager was built as a tool to aid
                                 HR teams during the coronavirus pandemic. In
                                 the Month of April (2020) “employed people not
@@ -135,6 +139,7 @@ export default class Home extends Component {
                                 requests so they may get to the necessary third
                                 party, and allow your HR teams to focus on what
                                 matters most, your employees.
+                                <br/>
                                 <br/>
                                 <Link to="/products" style={{ color: 'inherit', textDecoration: 'none' }}>
                                 <b>Go to products page</b><ArrowForwardIcon style={{fontSize:"5vw", position:"absolute", bottom:"-.05vw"}}/>
@@ -161,7 +166,7 @@ export default class Home extends Component {
                              <div  height="60vw" style={{position:"relative", top:"10%", left:"0", right:"10%"}}>
                             <Typography style={{fontSize:"6vw", lineHeight:"6vw"}}><b>Get in Touch!
                                 <br/>Let’s start a conversation.</b></Typography>
-                            <Typography style={{fontSize:"4vw", marginRight:"6vw", marginTop:"5vw", lineHeight:"6vw", marginBottom: "3vw"}}>
+                            <Typography style={{fontSize:"4vw", marginRight:"12vw", marginTop:"5vw", lineHeight:"6vw", marginBottom: "3vw"}}>
                                 We look forward to hearing about how we can
                                 help your HR team with our tailored software.
                                 Through our custom-made platform, 24/7
@@ -185,10 +190,12 @@ export default class Home extends Component {
                             <b>Esra Systems</b>
                             <br/>
                             <br/>
+                            <br/>
                             <Typography style={{fontSize:"3vw"}}>
                                 Business Inquiries: info@esrasystems.com
                              <br/>Career Inquiries: jobs@esrasystems.com
                             </Typography>
+                            <br/>
                                 <Typography style={{fontSize:"2vw"}}>
                                 All Rights Reserved © Esra Systems LLC 2020
                                 </Typography>
