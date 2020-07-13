@@ -16,13 +16,29 @@ import homemobile3 from '../images/1/mobile/homemobile3.jpg'
 import homemobile4 from '../images/1/mobile/homemobile4.jpg'
 import homemobile5 from '../images/1/mobile/homemobile5.jpg'
 import footer from '../images/1/mobile/Footerdiff.jpg'
+import Demo from '../images/demovideo.mp4';
 import { CSSTransition } from 'react-transition-group';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import 'date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker,
+} from '@material-ui/pickers';
 import '../index.css';
 
 export default class Home extends Component {
     constructor(props) {
         super(props)
-        this.state = { isLoading: true, drawerActivate:false, drawer:false }
+        this.state = { isLoading: true, drawerActivate:false, drawer:false, reasonError:false, nameError:false, 
+            scheduledDate:null, dateError:false}
         this.smallScreen = this.smallScreen.bind(this);
         this.largeScreen = this.largeScreen.bind(this);
         this.isVisiblefirst = true;
@@ -45,7 +61,40 @@ export default class Home extends Component {
         document.body.style.background = "#F5F5F5";
         this.setState({ isLoading: false })
     }
+    sendinfo() {
+        var email = document.getElementById('email').value;
+        var name = document.getElementById('name').value;
+        var date = document.getElementById("date-picker-inline").value;
+        var message = document.getElementById("message").value;
+            if (!(email.length > 0 
+                && email.includes('@'))) {
+                this.setState({reasonError : true});
+            } 
+            else if (!(email.length > 0)) {
+                this.setState({nameError : true});
+            } 
+           else if (!(date.length > 0)) {
+                this.setState({dateError : true});
+            } else {
+            const mailgun = require("mailgun-js");
+            const DOMAIN = 'sandboxd32869ae6c354bbc8fa171fc10848fe3.mailgun.org';
+            const mg = mailgun({apiKey: "44a64c00776f628f11552ac1e1e871fe-913a5827-01ba79fb", domain: DOMAIN});
+            const data = {
+            from: name + ' <' + email  + '>',
+            to: 'info@esrasystems.com',
+          subject: 'Schedule a free trial for ' + email  + ' on ' + date,
+             text: 'Hello! This is ' + name
+              + '\nI would like a free trial on ' + date
+              + 'Addtional Message :\n' + message
 
+        };
+        mg.messages().send(data, function (error, body) {
+            alert("message sent sucessfully!");
+        });
+            }
+
+
+    }
     //small screens 
     smallScreen() {
         return(
@@ -174,11 +223,10 @@ export default class Home extends Component {
                                 we are confident we can solve your company’s
                                 HR challenges. Help us help you.
                                 <br/><br/>
-                                <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
-                                <b>Contact Us</b><ArrowForwardIcon style={{fontSize:"5vw", position:"absolute", bottom:"-.05vw"}}/>
-
-                                </Link>
                                 </Typography>
+
+
+
                                 </div>
 
                         </Typography>
@@ -209,6 +257,7 @@ export default class Home extends Component {
 
     //large screens
     largeScreen() {
+        const {reasonError, nameError, dateError, scheduledDate} = this.state;
         return (
             <Fragment>
                 <Navbar/>
@@ -225,6 +274,9 @@ export default class Home extends Component {
                     </div>
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={home3wtext} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
+                            <video style={{position:"absolute", width:"46%", height:"49%",top:"25.7%",left:"52.5%"}} controls>
+                            <source src={Demo} type="video/mp4"/>
+                            </video>
                         <Link to="/products" style={{ color: 'inherit', textDecoration: 'none' }}>
                             <div style={{position:"absolute", bottom:"24%", left:"7.7%"}}>
                                 <Typography style={{fontFamily:"Arial", fontSize:"2vw", fontWeight:"bold", color:"#333333"}}>Go to products page <ArrowForwardIcon 
@@ -234,12 +286,80 @@ export default class Home extends Component {
                     </div >
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={home4wtext} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
-                        <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
-                            <div style={{position:"absolute", bottom:"30%", left:"7.7%"}}>
-                                <Typography style={{fontFamily:"Arial", fontSize:"2vw", fontWeight:"bold", color:"#333333"}}>Contact Us
-                                </Typography>
+                            <div style={{position:"absolute", bottom:"16.5%", left:"2.7%"}}>
+                                <Paper className="containers" style={{ width:"35vw", paddingLeft: "0.2vw", marginTop:"10px", paddingRight: "3.8vw",
+                                backgroundColor:"rgb(245, 245, 245)"}}>
+                            <div>
+                             <Grid container style={{ alignItems: "center" }}>
+                            <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:"10px"}}>
+                            <FormControl error={nameError}>
+                               
+                                <TextField id="name" label="Name" style={{fontFamily:"Arial", fontSize:"1vw", fontWeight:"bold", color:"#333333"}}>
+                                </TextField>
+
+                                
+                                <FormHelperText>{(nameError) ? "Do not leave blank" : ""}</FormHelperText>
+
+                                </FormControl>
+                                
+                                </Grid>
+                            <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:"10px"}}>
+                                <FormControl error={reasonError}>
+                               
+                                <TextField id="email" label="Email" style={{fontFamily:"Arial", fontSize:"1vw", fontWeight:"bold", color:"#333333"}}>
+                                </TextField>
+
+                                
+                                <FormHelperText>{(reasonError) ? "Please use a valid email address" : ""}</FormHelperText>
+
+                                </FormControl>
+                                
+                                </Grid>
+                                <Grid item   style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:"10px"}}>
+                                     <FormControl error={dateError}>
+                                    <MuiPickersUtilsProvider utils={DateFnsUtils} >
+                                      <KeyboardDatePicker
+                                        style={{ width: "70%" }}
+                                        disableToolbar
+                                        variant="inline"
+                                        format="MM/dd/yyyy"
+                                        margin="normal"
+                                        id="date-picker-inline"
+                                        autoOk={true}
+                                        label="Date for free trial"
+                                        value={scheduledDate}
+                                        onChange={(e) => this.setState({ scheduledDate: e })}
+                                        KeyboardButtonProps={{
+                                          'aria-label': 'change date',
+                                        }}
+                                      />
+                                       <FormHelperText>{(dateError) ? "please select a date" : ""}</FormHelperText>
+                                    </MuiPickersUtilsProvider>
+                                   
+                                    </FormControl>
+                                     </Grid>
+                                  </Grid>
+                                  </div>
+                                  <div>
+                                    <Grid container style={{ alignItems: "right" }}>
+
+                                    <Grid item style={{width:"20vw", fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:"10px"}}>
+                                <FormControl>
+                               
+                                <TextField id="message" label="Message" multiline rows={4}
+                                style={{width:"20vw", fontFamily:"Arial", fontSize:"1vw", color:"#333333", }}>
+                                </TextField>
+                                </FormControl>
+                                
+                               </Grid>
+                                 </Grid>
+                                 </div>
+                                 <Grid container style={{ justifyContent: "flex-end", marginTop: "1vw", marginBottom:"15px" }}>
+                                <Button variant="contained" color="secondary" onClick={() =>  this.sendinfo()} 
+                                style={{marginBottom:"15px" }} >Contact Us</Button>
+                                  </Grid>
+                                </Paper>
                             </div>
-                        </Link>
                     </div>
                     <div style={{position:"relative", textAlign:"right"}}>
                         <img src={home5wtext} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
