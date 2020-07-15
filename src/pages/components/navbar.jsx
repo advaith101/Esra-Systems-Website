@@ -79,12 +79,12 @@ class Navbar extends Component {
         this.destroyDrawer = this.destroyDrawer.bind(this);
     }
     componentWillMount(){
-        if(window.innerWidth <= 900){
+        if(window.outerWidth <= 900){
           this.setState({drawerActivate:true});
         }
     
         window.addEventListener('resize',()=>{
-          if(window.innerWidth <= 900){
+          if(window.outerWidth <= 900){
             this.setState({drawerActivate:true});
           }
           else{
