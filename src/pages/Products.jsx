@@ -16,6 +16,7 @@ import home5wtext from '../images/1/desktop/homewtxt5.jpg'
 import footer from '../images/1/mobile/Footerdiff.jpg'
 import Demo from '../images/demovideo.mp4'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
@@ -237,7 +238,7 @@ export default class Products extends Component {
 
                                 <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
                                     <Typography style={{fontFamily:"Arial", fontSize:"1.7vw", fontWeight:"bold", color:"#333333"}}>Schedule a free trial
-                                    <ArrowForwardIcon style={{fontSize:"2.1vw", position:"absolute", bottom:".2vw"}}/></Typography>
+                                    <ArrowDownwardIcon style={{fontSize:"2.1vw", position:"absolute", bottom:".2vw"}}/></Typography>
                                 </div>
                             </Link>
                         </div>
@@ -245,13 +246,13 @@ export default class Products extends Component {
                         <svg width="17vw" height="17vw">
                             <rect width="100%" height="100%" style={{fill:"#f5f5f5"}}/>
                         </svg>
-                            <div style={{position:"absolute", bottom:"11%", left:"7.7%", top:"5%"}}>
+                            <div style={{position:"absolute", bottom:"10vw", left:"7.7%", top:"5%"}}>
                                 
-                            <Paper className="containers" style={{ width:"70vw", paddingLeft: "5.8vw", marginTop:"10px", paddingRight: "5.8vw",
+                    <Paper className="containers" elevation={0} style={{ width:"90vw", height:"14vw", paddingLeft: "0.2vw", marginTop:".1vw", paddingRight: "3.8vw",
                                 backgroundColor:"rgb(245, 245, 245)"}}>
                             <div>
                              <Grid container style={{ alignItems: "center" }}>
-                            <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "5.8vw", marginTop:"10px"}}>
+                            <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:".1vw"}}>
                             <FormControl error={nameError}>
                                
                                 <TextField id="name" label="Name" style={{fontFamily:"Arial", fontSize:"1vw", fontWeight:"bold", color:"#333333"}}>
@@ -263,7 +264,7 @@ export default class Products extends Component {
                                 </FormControl>
                                 
                                 </Grid>
-                            <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "5.8vw", marginTop:"10px"}}>
+                            <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:".1vw"}}>
                                 <FormControl error={reasonError}>
                                
                                 <TextField id="email" label="Email" style={{fontFamily:"Arial", fontSize:"1vw", fontWeight:"bold", color:"#333333"}}>
@@ -275,7 +276,7 @@ export default class Products extends Component {
                                 </FormControl>
                                 
                                 </Grid>
-                                <Grid item   style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "5.8vw", marginTop:"10px"}}>
+                                <Grid item   style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:".1vw"}}>
                                      <FormControl error={dateError}>
                                     <MuiPickersUtilsProvider utils={DateFnsUtils} >
                                       <KeyboardDatePicker
@@ -286,7 +287,7 @@ export default class Products extends Component {
                                         margin="normal"
                                         id="date-picker-inline"
                                         autoOk={true}
-                                        label="Date for free trial"
+                                        label="Schedule Demo"
                                         value={scheduledDate}
                                         onChange={(e) => this.setState({ scheduledDate: e })}
                                         KeyboardButtonProps={{
@@ -303,20 +304,22 @@ export default class Products extends Component {
                                   <div>
                                     <Grid container style={{ alignItems: "right" }}>
 
-                                    <Grid item style={{width:"30vw", fontSize: "24px", color: "#006b6a", paddingLeft: "5.8vw", marginTop:"10px"}}>
+                                    <Grid item style={{width:"80vw", fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:".1vw"}}>
                                 <FormControl>
                                
                                 <TextField id="message" label="Message" multiline rows={4}
-                                style={{width:"30vw", fontFamily:"Arial", fontSize:"1vw", color:"#333333", }}>
+                                style={{width:"60vw", fontFamily:"Arial", fontSize:"1vw", color:"#333333", }}>
                                 </TextField>
+
                                 </FormControl>
-                                
+                                    <Button variant="contained" color="secondary" onClick={() =>  this.sendinfo()} 
+                                style={{marginTop:"2vw", width:"15vw", }} >Contact Us</Button>
                                </Grid>
+
                                  </Grid>
                                  </div>
-                                 <Grid container style={{ justifyContent: "flex-end", marginTop: "1vw", marginBottom:"15px" }}>
-                                <Button variant="contained" color="secondary" onClick={() =>  this.sendinfo()} 
-                                style={{marginBottom:"15px" }} >Contact Us</Button>
+                                 <Grid container style={{ justifyContent: "flex-end", marginTop: "1vw", marginBottom:".2vw" }}>
+
                                   </Grid>
                                 </Paper>
                             </div>
