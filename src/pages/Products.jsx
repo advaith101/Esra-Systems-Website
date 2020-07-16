@@ -280,7 +280,7 @@ export default class Products extends Component {
                                      <FormControl error={dateError}>
                                     <MuiPickersUtilsProvider utils={DateFnsUtils} >
                                       <KeyboardDatePicker
-                                        style={{ width: "70%" }}
+                                        style={{ width: "70%" , marginTop:"6px"}}
                                         disableToolbar
                                         variant="inline"
                                         format="MM/dd/yyyy"

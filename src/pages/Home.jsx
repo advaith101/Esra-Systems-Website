@@ -348,7 +348,7 @@ export default class Home extends Component {
                                 <FormControl>
                                
                                 <TextField id="message" label="Message" multiline rows={4}
-                                style={{width:"20vw", fontFamily:"Arial", fontSize:"1vw", color:"#333333", }}>
+                                style={{width:"20vw", fontFamily:"Arial", fontSize:"1vw", color:"#333333", marginLeft:"3.5px"}}>
                                 </TextField>
                                 </FormControl>
                                 
