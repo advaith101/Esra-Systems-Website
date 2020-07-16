@@ -234,13 +234,13 @@ export default class Products extends Component {
                             <video style={{position:"absolute", width:"46%", height:"49%",top:"25.7%",left:"52.5%"}} controls>
                             <source src={Demo} type="video/mp4"/>
                             </video>
-                            <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>
+                            {/* <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}> */}
 
                                 <div style={{position:"absolute", bottom:"26%", left:"7.7%"}}>
-                                    <Typography style={{fontFamily:"Arial", fontSize:"1.7vw", fontWeight:"bold", color:"#333333"}}>Schedule a free trial
+                                    <Typography style={{fontFamily:"Arial", fontSize:"1.5vw", fontWeight:"bold", color:"#333333"}}>Schedule a free trial
                                     <ArrowDownwardIcon style={{fontSize:"2.1vw", position:"absolute", bottom:".2vw"}}/></Typography>
                                 </div>
-                            </Link>
+                            {/* </Link> */}
                         </div>
                         <div style={{position:"relative", textAlign:"left"}}>
                         <svg width="17vw" height="17vw">
@@ -308,12 +308,12 @@ export default class Products extends Component {
                                 <FormControl>
                                
                                 <TextField id="message" label="Message" multiline rows={4}
-                                style={{width:"60vw", fontFamily:"Arial", fontSize:"1vw", color:"#333333", }}>
+                                style={{width:"50vw", fontFamily:"Arial", fontSize:"1vw", color:"#333333", }}>
                                 </TextField>
 
                                 </FormControl>
                                     <Button variant="contained" color="secondary" onClick={() =>  this.sendinfo()} 
-                                style={{marginTop:"2vw", width:"15vw", }} >Contact Us</Button>
+                                style={{marginTop:"4vw", width:"15vw", marginLeft:"70px" }} >Contact Us</Button>
                                </Grid>
 
                                  </Grid>
