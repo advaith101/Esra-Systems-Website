@@ -44,12 +44,12 @@ export default class Home extends Component {
         this.isVisiblefirst = true;
     }
     componentWillMount() {
-        if(window.outerWidth <= 850){
+        if(window.outerWidth <= 900){
           this.setState({drawerActivate:true});
         }
     
         window.addEventListener('resize',()=>{
-          if(window.outerWidth <= 850){
+          if(window.outerWidth <= 900){
             this.setState({drawerActivate:true});
           }
           else{
@@ -283,15 +283,16 @@ export default class Home extends Component {
                                 style={{fontSize:"2vw", position:"absolute", bottom:".2vw"}}/></Typography>
                             </div>
                         </Link>
-                    </div >
+                    </div>
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={home4wtext} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
-                            <div style={{position:"absolute", bottom:"16.5%", left:"2.7%"}}>
-                                <Paper className="containers" style={{ width:"35vw", paddingLeft: "0.2vw", marginTop:"10px", paddingRight: "3.8vw",
+                            <div style={{position:"absolute",  width:"35vw", height:"27vw", bottom:"10vw", left:"2.7%"}}>
+                            <Typography style={{fontFamily:"Arial",  paddingLeft: "0.2vw", fontSize:"2vw", fontWeight:"bold", color:"#333333"}}>Schedule a Demo!</Typography>
+                                <Paper className="containers" elevation={0} style={{ width:"35vw", height:"27vw", paddingLeft: "0.2vw", marginTop:"10px", paddingRight: "3.8vw",
                                 backgroundColor:"rgb(245, 245, 245)"}}>
                             <div>
                              <Grid container style={{ alignItems: "center" }}>
-                            <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:"10px"}}>
+                            <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:".1vw"}}>
                             <FormControl error={nameError}>
                                
                                 <TextField id="name" label="Name" style={{fontFamily:"Arial", fontSize:"1vw", fontWeight:"bold", color:"#333333"}}>
@@ -303,7 +304,7 @@ export default class Home extends Component {
                                 </FormControl>
                                 
                                 </Grid>
-                            <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:"10px"}}>
+                            <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:".1vw"}}>
                                 <FormControl error={reasonError}>
                                
                                 <TextField id="email" label="Email" style={{fontFamily:"Arial", fontSize:"1vw", fontWeight:"bold", color:"#333333"}}>
@@ -315,7 +316,7 @@ export default class Home extends Component {
                                 </FormControl>
                                 
                                 </Grid>
-                                <Grid item   style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:"10px"}}>
+                                <Grid item   style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:".1vw"}}>
                                      <FormControl error={dateError}>
                                     <MuiPickersUtilsProvider utils={DateFnsUtils} >
                                       <KeyboardDatePicker
@@ -326,7 +327,7 @@ export default class Home extends Component {
                                         margin="normal"
                                         id="date-picker-inline"
                                         autoOk={true}
-                                        label="Date for free trial"
+                                        label="Schedule Demo"
                                         value={scheduledDate}
                                         onChange={(e) => this.setState({ scheduledDate: e })}
                                         KeyboardButtonProps={{
@@ -343,7 +344,7 @@ export default class Home extends Component {
                                   <div>
                                     <Grid container style={{ alignItems: "right" }}>
 
-                                    <Grid item style={{width:"20vw", fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:"10px"}}>
+                                    <Grid item style={{width:"20vw", fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:".1vw"}}>
                                 <FormControl>
                                
                                 <TextField id="message" label="Message" multiline rows={4}
@@ -354,9 +355,9 @@ export default class Home extends Component {
                                </Grid>
                                  </Grid>
                                  </div>
-                                 <Grid container style={{ justifyContent: "flex-end", marginTop: "1vw", marginBottom:"15px" }}>
+                                 <Grid container style={{ justifyContent: "flex-end", marginTop: "1vw", marginBottom:".2vw" }}>
                                 <Button variant="contained" color="secondary" onClick={() =>  this.sendinfo()} 
-                                style={{marginBottom:"15px" }} >Contact Us</Button>
+                                style={{marginBottom:".2vw" }} >Contact Us</Button>
                                   </Grid>
                                 </Paper>
                             </div>
