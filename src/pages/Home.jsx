@@ -279,7 +279,7 @@ export default class Home extends Component {
                             </video>
                         <Link to="/products" style={{ color: 'inherit', textDecoration: 'none' }}>
                             <div style={{position:"absolute", bottom:"24%", left:"7.7%"}}>
-                                <Typography style={{fontFamily:"Arial", fontSize:"2vw", fontWeight:"bold", color:"#333333"}}>Go to products page <ArrowForwardIcon 
+                                <Typography style={{fontFamily:"Arial", fontSize:"1.6vw", fontWeight:"bold", color:"#333333"}}>Go to products page <ArrowForwardIcon 
                                 style={{fontSize:"2vw", position:"absolute", bottom:".2vw"}}/></Typography>
                             </div>
                         </Link>
@@ -287,11 +287,11 @@ export default class Home extends Component {
                     <div style={{position:"relative", textAlign:"left"}}>
                         <img src={home4wtext} display="flex" alt="Background1" style={{maxWidth:"100%"}}></img>
                             <div style={{position:"absolute",  width:"35vw", height:"27vw", bottom:"10vw", left:"2.7%"}}>
-                            <Typography style={{fontFamily:"Arial",  paddingLeft: "0.2vw", fontSize:"2vw", fontWeight:"bold", color:"#333333"}}>Schedule a Demo!</Typography>
+                            <Typography style={{fontFamily:"Arial",  paddingLeft: "0.2vw", fontSize:"2vw", fontWeight:"bold", color:"#333333", marginLeft:"4vw", marginTop:"8%"}}>Schedule a 30 minute demo!</Typography>
                                 <Paper className="containers" elevation={0} style={{ width:"35vw", height:"27vw", paddingLeft: "0.2vw", marginTop:"10px", paddingRight: "3.8vw",
                                 backgroundColor:"rgb(245, 245, 245)"}}>
                             <div>
-                             <Grid container style={{ alignItems: "center" }}>
+                             <Grid container style={{ alignItems: "center", marginTop: "40px", marginLeft:"4px" }}>
                             <Grid item style={{ fontSize: "24px", color: "#006b6a", paddingLeft: "3.8vw", marginTop:".1vw"}}>
                             <FormControl error={nameError}>
                                
